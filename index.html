@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Work AI | Consultoria em Automação de Negócios</title>
+    <meta name="description" content="Consultoria especializada em automação de processos e inteligência artificial para médias e grandes empresas. Economize tempo e reduza custos.">
+    
+    <!-- Favicon (SVG Base64) -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwQzJGRjtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDY2RkY7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAsIDE1KSI+PHBhdGggZD0iTSAyMCA4MCBMIDUwIDgwIEwgODAgMzAiIHN0cm9rZT0idXJsKCNncmFkMSkiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0gMjAgNTUgTCA1MCA1NSBMIDY1IDMwIiBzdHJva2U9InVybCgjZ3JhZDEpIiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNIDIwIDMwIEwgMzUgMzAiIHN0cm9rZT0idXJsKCNncmFkMSkiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0gNjUgODAgTCA4MCA4MCBMIDk1IDU1IiBzdHJva2U9InVybCgjZ3JhZDEpIiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiLz48L2c+PC9zdmc+" type="image/svg+xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deepworkai.com/">
+    <meta property="og:title" content="Deep Work AI | Business Automation Consultancy">
+    <meta property="og:description" content="Custom automation solutions for business efficiency. We don not sell apps; we sell results.">
+    <meta property="og:image" content="https://deepworkai.com/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #0A2540;
+            --color-secondary: #00B3FF;
+            --color-bg: #FFFFFF;
+            --color-bg-alt: #F5F5F7;
+            --color-text: #0A2540;
+            --color-text-light: #425466;
+            --font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2rem; letter-spacing: -0.01em; margin-bottom: 2rem; text-align: center; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; color: var(--color-text-light); }
+
+        @media (min-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            h2 { font-size: 2.5rem; }
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .bg-alt {
+            background-color: var(--color-bg-alt);
+        }
+
+        /* Header / Nav */
+        header {
+            padding: 1.5rem 0;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .logo-svg {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        /* Components */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--color-secondary);
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #0095D5;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 8rem; /* Space for logo */
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Cards */
+        .card {
+            background: #FFFFFF;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--color-secondary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+
+        /* Steps */
+        .step {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 4rem;
+            font-weight: 700;
+            color: rgba(10, 37, 64, 0.1);
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .step h3, .step p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #E6E6E6;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-primary);
+            color: #FFFFFF;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        footer a:hover {
+            color: #FFFFFF;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            color: rgba(255,255,255,0.7);
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Utility */
+        .hidden { display: none !important; }
+        .text-center { text-align: center; }
+        .mb-2 { margin-bottom: 2rem; }
+        
+        /* Icons */
+        .icon-inline {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <!-- LOGO SVG INLINE -->
+            <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#00C2FF;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0066FF;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(20, 10)">
+                <path d="M 20 80 L 50 80 L 80 30" stroke="url(#grad1)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 20 55 L 50 55 L 65 30" stroke="url(#grad1)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 20 30 L 35 30" stroke="url(#grad1)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 65 80 L 80 80 L 95 55" stroke="url(#grad1)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </g>
+              <text x="130" y="65" font-family="Montserrat, sans-serif" font-weight="700" fill="#0A2342" font-size="38">DEEPWORK</text>
+              <text x="130" y="100" font-family="Montserrat, sans-serif" font-weight="500" fill="#0A2342" font-size="24" letter-spacing="2">AI FLOWS</text>
+            </svg>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 data-i18n="hero-title">Automação Inteligente para Negócios Reais</h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">
+                Soluções personalizadas para problemas específicos. Transformamos processos manuais em fluxos automatizados integrados às ferramentas que você já usa.
+            </p>
+            <a href="https://wa.me/554299110955" class="btn btn-whatsapp" data-i18n="hero-cta">
+                <svg class="icon-inline" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Quero economizar tempo agora
+            </a>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="bg-alt">
+        <div class="container">
+            <h2 data-i18n="what-title">O Que Fazemos</h2>
+            <p class="text-center mb-2" style="max-width: 700px; margin: 0 auto 3rem auto;" data-i18n="what-desc">
+                A Deep Work AI não é uma vendedora de SaaS. Somos uma consultoria de eficiência. 
+                Analisamos seu negócio, identificamos gargalos e construímos automações que se integram às ferramentas que você já usa.
+            </p>
+            <div class="grid grid-3">
+                <div class="card">
+                    <!-- Icon: Settings/Gears -->
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 data-i18n="what-1-title">Automação de Processos</h3>
+                    <p data-i18n="what-1-desc">Eliminamos tarefas repetitivas conectando seus sistemas atuais (CRM, ERP, Planilhas) para trabalharem sozinhos.</p>
+                </div>
+                <div class="card">
+                    <!-- Icon: Robot/AI -->
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3 data-i18n="what-2-title">Assistentes de IA Internos</h3>
+                    <p data-i18n="what-2-desc">Criamos agentes de IA treinados nos dados da sua empresa para suporte, triagem e análise de documentos.</p>
+                </div>
+                <div class="card">
+                    <!-- Icon: Link/Integration -->
+                    <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    <h3 data-i18n="what-3-title">Integrações Customizadas</h3>
+                    <p data-i18n="what-3-desc">Fazemos seus softwares conversarem entre si, eliminando a necessidade de copiar e colar dados manualmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section>
+        <div class="container">
+            <h2 data-i18n="benefits-title">Por Que Automatizar?</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3 data-i18n="benefit-1-title">Redução de Custos Operacionais</h3>
+                    <p data-i18n="benefit-1-desc">Diminua a necessidade de contratações para tarefas braçais e reduza erros humanos que custam dinheiro.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="benefit-2-title">Foco no Que Importa</h3>
+                    <p data-i18n="benefit-2-desc">Libere sua equipe sênior de tarefas administrativas para focar em estratégia e vendas.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="benefit-3-title">Consistência e Qualidade</h3>
+                    <p data-i18n="benefit-3-desc">Robôs não cansam e não esquecem etapas. Garanta que todo processo siga o padrão de qualidade da empresa.</p>
+                </div>
+                <div>
+                    <h3 data-i18n="benefit-4-title">Escalabilidade Imediata</h3>
+                    <p data-i18n="benefit-4-desc">Aumente sua capacidade de atendimento e processamento sem aumentar proporcionalmente sua estrutura física.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE WORK -->
+    <section class="bg-alt">
+        <div class="container">
+            <h2 data-i18n="how-title">Como Trabalhamos</h2>
+            <div class="grid grid-3">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3 data-i18n="how-1-title">Diagnóstico</h3>
+                    <p data-i18n="how-1-desc">Mergulhamos no seu negócio para entender os fluxos atuais e onde estão os desperdícios de tempo.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3 data-i18n="how-2-title">Mapeamento & Design</h3>
+                    <p data-i18n="how-2-desc">Desenhamos a solução ideal utilizando as ferramentas que você já possui, sem forçar novos softwares.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3 data-i18n="how-3-title">Desenvolvimento & Entrega</h3>
+                    <p data-i18n="how-3-desc">Construímos, testamos e implementamos a automação, treinando sua equipe para o novo fluxo otimizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section>
+        <div class="container">
+            <h2 data-i18n="examples-title">Soluções Reais</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3 data-i18n="ex-1-title">Atendimento Comercial via IA</h3>
+                    <p data-i18n="ex-1-desc">Agente que qualifica leads no WhatsApp, tira dúvidas sobre produtos e agenda reuniões apenas com clientes prontos para compra, tudo integrado ao CRM.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="ex-2-title">Automação Administrativa</h3>
+                    <p data-i18n="ex-2-desc">Robôs que leem e-mails, baixam notas fiscais, preenchem planilhas e lançam dados no sistema financeiro/contábil sem intervenção humana.</p>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="ex-3-title">Gestão de Operações em Tempo Real</h3>
+                    <p data-i18n="ex-3-desc">Painéis de gestão à vista conectados a ERPs legados. Alertas automáticos via WhatsApp para gestores sobre gargalos na produção ou serviços atrasados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="bg-alt text-center">
+        <div class="container">
+            <h2 data-i18n="proof-title">Confiança</h2>
+            <p data-i18n="proof-desc">Ajudando empresas a recuperarem centenas de horas produtivas todos os meses.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container" style="max-width: 800px;">
+            <h2 data-i18n="faq-title">Perguntas Frequentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq-1-q">Vocês vendem um software pronto?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq-1-a">Não. Somos uma consultoria. Criamos soluções personalizadas que conectam os softwares que você já usa. Não vendemos mais uma mensalidade de ferramenta.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq-2-q">Preciso contratar programadores para manter?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq-2-a">Não. Nossas soluções são construídas para serem robustas e de baixa manutenção. Oferecemos suporte contínuo se necessário, mas você não precisa de equipe técnica interna.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq-3-q">Quanto tempo demora um projeto?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq-3-a">Depende da complexidade. Projetos de automação simples podem ser entregues em 1-2 semanas. Consultorias mais profundas de reestruturação de processos levam de 4 a 8 semanas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq-4-q">Serve para pequenas empresas?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq-4-a">Nosso foco principal são médias e grandes empresas que possuem volume de processos suficiente para justificar o investimento em automação customizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-alt text-center">
+        <div class="container">
+            <h2 data-i18n="cta-title">Pronto para otimizar sua operação?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem auto;" data-i18n="cta-desc">
+                Pare de desperdiçar o talento da sua equipe com tarefas repetitivas. Vamos desenhar a solução ideal para o seu negócio.
+            </p>
+            <a href="https://wa.me/554299110955" class="btn btn-whatsapp" data-i18n="cta-btn">
+                <svg class="icon-inline" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Quero economizar tempo agora
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <!-- LOGO SVG INLINE FOOTER -->
+            <svg class="logo-svg" style="height: 40px; margin-bottom: 1rem; margin-left: auto; margin-right: auto;" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#00C2FF;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#0066FF;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(20, 10)">
+                <path d="M 20 80 L 50 80 L 80 30" stroke="url(#grad2)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 20 55 L 50 55 L 65 30" stroke="url(#grad2)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 20 30 L 35 30" stroke="url(#grad2)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M 65 80 L 80 80 L 95 55" stroke="url(#grad2)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </g>
+              <text x="130" y="65" font-family="Montserrat, sans-serif" font-weight="700" fill="#FFFFFF" font-size="38">DEEPWORK</text>
+              <text x="130" y="100" font-family="Montserrat, sans-serif" font-weight="500" fill="#FFFFFF" font-size="24" letter-spacing="2">AI FLOWS</text>
+            </svg>
+            
+            <!-- Social Icons -->
+            <div class="social-links">
+                <!-- LinkedIn -->
+                <a href="#" aria-label="LinkedIn">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <!-- Instagram -->
+                <a href="#" aria-label="Instagram">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <!-- Email -->
+                <a href="mailto:joaobalzer@gmail.com" aria-label="Email">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <p><a href="mailto:joaobalzer@gmail.com">joaobalzer@gmail.com</a></p>
+                <p><a href="https://wa.me/554299110955">+55 42 9911-0955</a></p>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2025 Deep Work AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Translations Database
+        const translations = {
+            'pt-BR': {
+                'hero-title': 'Automação Inteligente para Negócios Reais',
+                'hero-subtitle': 'Soluções personalizadas para problemas específicos. Transformamos processos manuais em fluxos automatizados integrados às ferramentas que você já usa.',
+                'hero-cta': 'Falar com um consultor',
+                'what-title': 'O Que Fazemos',
+                'what-desc': 'A Deep Work AI não é uma vendedora de SaaS. Somos uma consultoria de eficiência. Analisamos seu negócio, identificamos gargalos e construímos automações que se integram às ferramentas que você já usa.',
+                'what-1-title': 'Automação de Processos',
+                'what-1-desc': 'Eliminamos tarefas repetitivas conectando seus sistemas atuais (CRM, ERP, Planilhas) para trabalharem sozinhos.',
+                'what-2-title': 'Assistentes de IA Internos',
+                'what-2-desc': 'Criamos agentes de IA treinados nos dados da sua empresa para suporte, triagem e análise de documentos.',
+                'what-3-title': 'Integrações Customizadas',
+                'what-3-desc': 'Fazemos seus softwares conversarem entre si, eliminando a necessidade de copiar e colar dados manualmente.',
+                'benefits-title': 'Por Que Automatizar?',
+                'benefit-1-title': 'Redução de Custos Operacionais',
+                'benefit-1-desc': 'Diminua a necessidade de contratações para tarefas braçais e reduza erros humanos que custam dinheiro.',
+                'benefit-2-title': 'Foco no Que Importa',
+                'benefit-2-desc': 'Libere sua equipe sênior de tarefas administrativas para focar em estratégia e vendas.',
+                'benefit-3-title': 'Consistência e Qualidade',
+                'benefit-3-desc': 'Robôs não cansam e não esquecem etapas. Garanta que todo processo siga o padrão de qualidade da empresa.',
+                'benefit-4-title': 'Escalabilidade Imediata',
+                'benefit-4-desc': 'Aumente sua capacidade de atendimento e processamento sem aumentar proporcionalmente sua estrutura física.',
+                'how-title': 'Como Trabalhamos',
+                'how-1-title': 'Diagnóstico',
+                'how-1-desc': 'Mergulhamos no seu negócio para entender os fluxos atuais e onde estão os desperdícios de tempo.',
+                'how-2-title': 'Mapeamento & Design',
+                'how-2-desc': 'Desenhamos a solução ideal utilizando as ferramentas que você já possui, sem forçar novos softwares.',
+                'how-3-title': 'Desenvolvimento & Entrega',
+                'how-3-desc': 'Construímos, testamos e implementamos a automação, treinando sua equipe para o novo fluxo otimizado.',
+                'examples-title': 'Soluções Reais',
+                'ex-1-title': 'Atendimento Comercial via IA',
+                'ex-1-desc': 'Agente que qualifica leads no WhatsApp, tira dúvidas sobre produtos e agenda reuniões apenas com clientes prontos para compra, tudo integrado ao CRM.',
+                'ex-2-title': 'Automação Administrativa',
+                'ex-2-desc': 'Robôs que leem e-mails, baixam notas fiscais, preenchem planilhas e lançam dados no sistema financeiro/contábil sem intervenção humana.',
+                'ex-3-title': 'Gestão de Operações em Tempo Real',
+                'ex-3-desc': 'Painéis de gestão à vista conectados a ERPs legados. Alertas automáticos via WhatsApp para gestores sobre gargalos na produção ou serviços atrasados.',
+                'proof-title': 'Confiança',
+                'proof-desc': 'Ajudando empresas a recuperarem centenas de horas produtivas todos os meses.',
+                'faq-title': 'Perguntas Frequentes',
+                'faq-1-q': 'Vocês vendem um software pronto?',
+                'faq-1-a': 'Não. Somos uma consultoria. Criamos soluções personalizadas que conectam os softwares que você já usa. Não vendemos mais uma mensalidade de ferramenta.',
+                'faq-2-q': 'Preciso contratar programadores para manter?',
+                'faq-2-a': 'Não. Nossas soluções são construídas para serem robustas e de baixa manutenção. Oferecemos suporte contínuo se necessário, mas você não precisa de equipe técnica interna.',
+                'faq-3-q': 'Quanto tempo demora um projeto?',
+                'faq-3-a': 'Depende da complexidade. Projetos de automação simples podem ser entregues em 1-2 semanas. Consultorias mais profundas de reestruturação de processos levam de 4 a 8 semanas.',
+                'faq-4-q': 'Serve para pequenas empresas?',
+                'faq-4-a': 'Nosso foco principal são médias e grandes empresas que possuem volume de processos suficiente para justificar o investimento em automação customizada.',
+                'cta-title': 'Pronto para otimizar sua operação?',
+                'cta-desc': 'Pare de desperdiçar o talento da sua equipe com tarefas repetitivas. Vamos desenhar a solução ideal para o seu negócio.',
+                'cta-btn': 'Quero economizar tempo agora'
+            }
+        };
+
+        // Language Detection & Handling
+        function getInitialLanguage() {
+            // Check manual override first
+            const savedLang = localStorage.getItem('deepwork_lang');
+            if (savedLang) return savedLang;
+
+            // Check browser language
+            const browserLang = navigator.language || navigator.userLanguage;
+            
+            // Strict rule: Brazil = PT-BR, Everything else = EN
+            if (browserLang === 'pt-BR' || browserLang === 'pt') {
+                return 'pt-BR';
+            }
+            // Default to PT-BR if not explicitly EN
+            return 'pt-BR';
+        }
+
+        function setLanguage(lang) {
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            // Save preference
+            localStorage.setItem('deepwork_lang', lang);
+
+            // Update UI
+            updateContent(lang);
+        }
+
+        function updateContent(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    // Preserve SVG icons inside buttons if any
+                    const icon = el.querySelector('svg');
+                    if (icon) {
+                        const text = translations[lang][key];
+                        el.innerHTML = ''; // Clear
+                        el.appendChild(icon); // Add icon back
+                        el.appendChild(document.createTextNode(' ' + text)); // Add text
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+            const symbol = element.querySelector('span:last-child');
+            symbol.textContent = item.classList.contains('active') ? '-' : '+';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Force PT-BR as default initially, but respect logic
+            const lang = getInitialLanguage();
+            setLanguage(lang);
+        });
+
+    </script>
+</body>
+</html>
